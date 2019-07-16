@@ -1,0 +1,21 @@
+<div class="swipearea">
+    <div class="sentence">
+    <%= @sentence.body %>
+    </div>
+    <% unless @sentence.id==1 %>
+        <div class="actions" id="actionBtnArea">
+                <%=link_to sentence_reactions_path(@sentence, params: { sentence_id: params[:id]} , like_id: 2 ) , :method => :post do %>
+                <i class="fas fa-times fa-4x color"></i>
+                <% end %>
+                <%=link_to sentence_reactions_path(@sentence, params: { sentence_id: params[:id]} , like_id: 1 ) , :method => :post do %>
+                <i class="fas fa-heart fa-4x color"></i>
+                <% end %>
+        </div>
+    <% else %>
+        <div class="twitter">
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    <% end %>
+</div>
+    
+

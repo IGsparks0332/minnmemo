@@ -1,0 +1,67 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+.button{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.topPage {
+  background-color: #64C99B;
+  height: 2vw;
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    margin-left: 55vw;
+    font-weight: bold;
+    & > ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0.2vw;
+      & > li {
+        list-style: none;
+        width: 100%;
+        font-size: 0.8vw;
+        text-align: center;
+        &.swipe {
+          i{
+        display: inline-block;
+        text-decoration: none;
+          }
+        }
+        &.home {
+          i{
+        display: inline-block;
+          }
+        }
+        &.appIcon {
+          i {
+        display: inline-block;
+          }
+        }
+        &.booksIcon {
+          i {
+        display: inline-block;
+          }
+        }
+        &.messageIcon {
+           i {
+        display: inline-block;
+           }
+        }
+      }
+    }
+  }
+}
+
+.swipenavi{
+  text-align: center;
+}
+

@@ -1,0 +1,32 @@
+<div class="container">
+    <h2 class="matchercontainer">マッチング一覧</h2>
+    <div class="matcherlist">
+        <% @match_users.each do |user| %>
+            <div class="matchingheader">
+                <div class="matchingPerson">
+                    <div class="matchingPerson_name"><%= user.name %></div>
+                </div>
+                <div class="openchat">
+                    <%= form_tag :chat_index, method: :post do %>
+                        <input name="user_id" type="hidden" value="<%= user.id %>" />
+                    <%= submit_tag 'チャットを開く', class: "chatForm_btn" %>
+                    <% end %>
+                </div>
+            </div>
+                <h1>相手からのいいね。</h1>
+                <% match_sentences_to_currentuser = Reaction.where(sentence_id: @got_reaction_users_sentences , user_id: user.id).map(&:sentence_id) %>
+                <% match_sentences_to_currentuser = Sentence.where(id: match_sentences_to_currentuser) %>
+                <% match_sentences_to_currentuser.each do |sentence| %>
+                    <%= sentence.title %>
+                <% end %>
+                <h1>自分からのいいね</h1>
+                <% match_sentences_from_currentuser = Reaction.where(user_id: current_user.id , sentence_id: Sentence.where(user_id: user.id),like_id: 1).map(&:sentence_id) %>
+                <% match_sentences_from_currentuser = Sentence.where(id: match_sentences_from_currentuser) %>
+                <% match_sentences_from_currentuser.each do |sentence| %>
+                    <%= sentence.title %>
+                <% end %>
+        <% end %>
+        
+
+    </div>
+</div>

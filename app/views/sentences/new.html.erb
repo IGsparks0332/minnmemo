@@ -1,0 +1,31 @@
+<%= form_for @sentence do |f| %>
+ <div class="field">
+   <%= f.label :タイトル %>
+   <br>
+   <%= f.text_field :title,size: 30 %>
+   <br>
+   <%= f.label :ページ %>
+   <br>
+   <%= f.text_field :page,size: 30 %>
+   <br>
+   <%= f.label :一節 %>
+   <br>
+   <%= f.text_field :body,size: 100 %>
+   <br>
+   <%= f.label :自由欄。他人に表示されません。 %>
+   <br>
+   <%= f.text_field :plus,size: 100 %>
+   <br>
+   <%= f.label :出版社 %>
+   <br>
+   <%= f.text_field :publisher,size: 30 %>
+   <br>
+   <%= f.label :筆者 %>
+   <br>
+   <%= f.text_field :author,size: 30 %>
+   <br>
+ </div>
+ <div class="action">
+   <%= f.submit %>
+ </div>
+<% end %>

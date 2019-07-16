@@ -1,0 +1,67 @@
+<div class="post">
+<%= link_to new_sentence_path, :method => :get do %>
+  <i class="fas fa-edit memo">新しくメモする</i>
+<% end %>
+</div>
+<br>
+
+
+
+<div class="posted">
+  <p class="posted-navi">投稿したメモ</p>
+
+      <% @sentences.each do |sentence| %>
+        <div class="container">
+          <div class="title">
+            <%= link_to sentence.title, sentence_path(sentence.id) %>
+          </div>
+          
+          <div class="page">
+            (P.<%=sentence.page %>)
+          </div>
+          <div class="sentencebox">
+            メモした一節:<%=sentence.body %>
+            <%= link_to "編集", edit_sentence_path(sentence.id) %>
+          </div>
+          <div class="plus">
+            プライベートメモ:<%=sentence.plus %>
+          </div>
+          <div class="author">
+            著者:<%=sentence.author %>
+          </div>
+          <br>
+          <div class="publisher">
+            出版:<%=sentence.publisher %>
+          </div>
+        </div>
+        <br>
+        <br>
+      <% end %>
+
+</div>
+
+<div class="liked">
+  <p class="liked-navi">いいねしたメモ</p>
+    
+      <% @reacted_sentences.each do |sentence|%>
+        <div class="container">
+          <div class="title">
+            <%= link_to sentence.title, sentence_path(sentence.id) %>
+          </div>
+          <div class="page">
+            (P.<%= sentence.page %>)
+          </div>
+          <div class="sentencebox">
+            メモした一節:<%=sentence.body %>
+          </div>
+          <div class="author">
+            著者:<%=sentence.author %>
+          </div>
+          <br>
+          <div class="publisher">
+            出版社:<%=sentence.publisher %>
+          </div>
+        </div>
+      <% end %>
+
+</div>

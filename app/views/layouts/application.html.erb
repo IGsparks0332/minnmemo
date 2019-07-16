@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Type</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="current_user_id" content="<%= current_user.id if current_user %>">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class="topPage">
+  <nav class="nav">
+    <ul>
+      <li class="home">
+        <%= link_to "ホーム", root_path , class: "button" %>
+      </li>
+      <li class="appIcon">
+        <% if user_signed_in? %>
+        <%= link_to "プロフィール", user_path(current_user.id), class: "button" , :method => :get %>
+        <% end %>
+      </li>
+      <li class="swipe">
+          <%= link_to "スワイプ", sentences_path , class: "button"%>
+      </li>
+      <li class="booksIcon">
+        <% if user_signed_in? %>
+        <%= link_to "メモ帳", reaction_path(current_user.id), class: "button", :method => :get  %>
+        <% end %>
+      </li>
+      <li class="messageIcon">
+        <% if user_signed_in? %>
+        <%= link_to "チャット"  , matching_index_path, class: "button", :method => :get  %>
+        <% end %>
+      </li>
+    </ul>
+  </nav>
+  </div>
+
+
+
+  <% if flash[:notice] %>
+    <div class="alert alert-info"><%= flash[:notice] %></div>
+  <% end %>
+  <% if flash[:alert] %>
+    <div class="alert alert-danger"><%= flash[:alert] %></div>
+  <% end %>
+    <%= yield %>
+  </body>
+</html>

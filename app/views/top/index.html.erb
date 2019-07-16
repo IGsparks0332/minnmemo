@@ -1,0 +1,12 @@
+
+<div class="rank">
+  <h3>いいね数ランキング</h3>
+  <% @rank.each.with_index(1) do |sentence,i| %>
+    第
+    <%=i%>
+    位
+    <%= sentence.title %>
+    <br>
+  <% end %>
+</div>
+
