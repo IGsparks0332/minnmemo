@@ -9,6 +9,62 @@ html, body {
   color: #FFFFFF;
 }
 
+
+
+@media screen and (max-width: 480px) {
+  .topPage {
+    background-color: #64C99B;
+    height: 5vh;
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: auto;
+      font-weight: bold;
+      & > ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 1vh;
+        & > li {
+          list-style: none;
+          width: 100%;
+          font-size: 1.5vh;
+          text-align: center;
+          &.swipe {
+            i{
+          display: inline-block;
+          text-decoration: none;
+            }
+          }
+          &.home {
+            i{
+          display: inline-block;
+            }
+          }
+          &.appIcon {
+            i {
+          display: inline-block;
+            }
+          }
+          &.booksIcon {
+            i {
+          display: inline-block;
+            }
+          }
+          &.messageIcon {
+             i {
+          display: inline-block;
+             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
 .topPage {
   background-color: #64C99B;
   height: 2vw;
@@ -60,8 +116,9 @@ html, body {
     }
   }
 }
+}
+
 
 .swipenavi{
   text-align: center;
 }
-
