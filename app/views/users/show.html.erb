@@ -15,12 +15,12 @@
 <div class='usershowPage'>
   <div class='container'>
     <div class='userInfo'>
-      <div class='username'>名前:<%= @user.name %></div>
-      <div class='userid'><%= @user.id %>人目のユーザーです。</div>
-      <div class='userInfo_selfIntroduction'>自己紹介:<%= @user.self_introduction %></div>
+      <div class='username'><p class=userInfop>名前:<%= @user.name %></p></div>
+      <div class='userid'><p class=userInfop><%= @user.id %>人目のユーザーです。</p></div>
+      <div class='userInfo_selfIntroduction'><p class=userInfop>自己紹介:<%= @user.self_introduction %></p></div>
       <br>
       <% if @user.self_introduction.blank? %>
-        <div class="userInfo_selfIntroduction">自己紹介文は設定されていません。</div>
+        <div class="userInfo_selfIntroduction"><p class=userInfop>自己紹介文は設定されていません。</p></div>
       <% end %>
     </div>
   </div>

@@ -2,32 +2,56 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.userAction_edit{
-    display: inline-box;
+@media screen and (min-width: 480px) {
+  .userAction_edit{
+      display: inline-box;
+  }
 
+  .userAction_logout{
+      display: inline-box;
+  }
+
+  .userActionlogo{
+      color:#64C99B;
+  }
+
+  .userAction{
+      display: inline-box;
+      margin: auto ;
+      margin-top: 1.5% ;
+      padding: 0.5%;
+      border: solid;
+      color:#64C99B;
+      width: 50%;
+  }
+
+  .usershowPage{
+      padding-top: 2%;
+      color:#323232;
+  }
 }
+@media screen and (max-width: 480px) {
+  .userAction{
+      display: inline-box;
+      margin: auto ;
+      margin-top: 1.5% ;
+      padding: 0.5%;
+      border: solid;
+      color:#64C99B;
+      width: 50%;
+      font-size: 4vw;
+  }
+  .usershowPage{
+      padding-top: 2%;
+      color:#323232;
+  }
+  .userAction_logout{
+      display: inline-box;
+  }
+  .userActionlogo{
+      color:#64C99B;
+  }
+  .userinfop{
 
-.userAction_logout{
-    display: inline-box;
+  }
 }
-
-.userActionlogo{
-    color:#64C99B;
-}
-
-.userAction{
-    display: inline-box;
-    margin: auto ;
-    margin-top: 1.5% ;
-    padding: 0.5%;
-    border: solid;
-    color:#64C99B;
-    width: 50%;
-    
-}
-
-.usershowPage{
-    padding-top: 2%;
-    color:#323232;
-}
-

@@ -2,68 +2,134 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.posted{
-    
+@media screen and (min-width: 480px) {
+
+  .post{
+      text-align: center;
+      margin-top: 1vh;
+      padding-top: 1vh;
+      padding-bottom: 1vh;
+      font-size: 1.5vw;
+      border-bottom: solid;
+      color: #64C99B;
+    }
+
+    .memo{
+      color: #64C99B;
+      border: solid;
+      padding: 10px;
+    }
+
+    .posted-navi{
+      padding-left: 25%;
+      font-size: 1.7vw;
+      color: #64C99B;
+    }
+
+    .posted{
+      float: left;
+      width: 50%;
+      padding-left: 5%;
+    }
+
+    .liked-navi{
+      padding-left: 75%;
+      font-size: 1.5vw;
+      color: #64C99B;
+    }
+
+    .liked{
+      padding-right: 5%;
+    }
+
+    .container{
+      color:#454545;
+      margin: 3px;
+      font-size: 1.7vh;
+    }
+
+    .page{
+      font-size: 1.5vh;
+    }
+
+
+    .author{
+      float: left;
+    }
+
+    .title{
+      font-size: 1.2vw;
+    }
+
 }
 
-.post{
-    text-align: center;
-    margin-top: 1vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    font-size: 1.5vw;
-    border-bottom: solid;
-    color: #64C99B;
-}
 
-.memo{
-    color: #64C99B;
-    border: solid;
-    padding: 10px;
-}
+@media screen and (max-width: 480px) {
 
-.posted-navi{
-    padding-left: 25%;
-    font-size: 1.7vw;
-    color: #64C99B;
-}
+    .post{
+        text-align: center;
+        margin-top: 1vh;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        font-size: 1.5vw;
+        border-bottom: solid;
+        color: #64C99B;
+      }
 
-.posted{
-     float: left;
-     width: 50%;
-     padding-left: 5%;
-}
+      .memo{
+        color: #64C99B;
+        border: solid;
+        padding: 10px;
+      }
 
-.liked-navi{
-    padding-left: 75%;
-    font-size: 1.5vw;
-    color: #64C99B;
-}
+      .posted-navi{
+        font-size: 3.3vw;
+        color: #64C99B;
+        text-align: center;
+      }
 
-.liked{
-    padding-right: 5%;
-}
+      .posted{
+      }
 
-.container{
-    color:#454545;
-    margin: 3px;
-    font-size: 1.7vh;
-}
+      .liked-navi{
+        font-size: 3.3vw;
+        color: #64C99B;
+        text-align: center;
+      }
 
-.page{
-    font-size: 1.5vh;
-}
+      .liked{
+        padding-right: 5%;
+      }
 
+      .container{
+        color:#454545;
+        margin: 3px;
+        font-size: 1.7vh;
+      }
 
-.author{
-    float: left;
-}
+      .page{
+        font-size: 1.5vh;
+      }
 
 
-.sentencebox{
-}
+      .title{
+        font-size: 3vw;
+        text-align: center;
+        padding-bottom: 5px;
+      }
 
+      .container{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-style: solid; border-color: #64C99B;
+      }
 
-.title{
-    font-size: 1.2vw;
+      .sentencebox{
+        padding-bottom: 5px;
+      }
+
+      .plus{
+        padding-bottom: 5px;
+      }
+
 }

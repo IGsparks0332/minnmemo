@@ -14,13 +14,10 @@
         <div class="container">
           <div class="title">
             <%= link_to sentence.title, sentence_path(sentence.id) %>
-          </div>
-          
-          <div class="page">
             (P.<%=sentence.page %>)
           </div>
           <div class="sentencebox">
-            メモした一節:<%=sentence.body %>
+            <%=sentence.body %>
             <%= link_to "編集", edit_sentence_path(sentence.id) %>
           </div>
           <div class="plus">
@@ -29,20 +26,17 @@
           <div class="author">
             著者:<%=sentence.author %>
           </div>
-          <br>
           <div class="publisher">
             出版:<%=sentence.publisher %>
           </div>
         </div>
-        <br>
-        <br>
       <% end %>
 
 </div>
 
 <div class="liked">
   <p class="liked-navi">いいねしたメモ</p>
-    
+
       <% @reacted_sentences.each do |sentence|%>
         <div class="container">
           <div class="title">
