@@ -32,26 +32,33 @@
 }
 @media screen and (max-width: 480px) {
   .userAction{
-      display: inline-box;
       margin: auto ;
       margin-top: 1.5% ;
       padding: 0.5%;
-      border: solid;
       color:#64C99B;
-      width: 50%;
+      width: 70%;
       font-size: 4vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .userAction_logout{
+      margin-left: 10px;
   }
   .usershowPage{
       padding-top: 2%;
       color:#323232;
   }
+  .user-show-container{
+      text-align: center
+  }
   .userAction_logout{
-      display: inline-box;
+
   }
   .userActionlogo{
       color:#64C99B;
   }
   .userinfop{
-
+      font-size: 3vw;
   }
 }

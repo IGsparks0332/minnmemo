@@ -11,7 +11,7 @@
   <p class="posted-navi">投稿したメモ</p>
 
       <% @sentences.each do |sentence| %>
-        <div class="container">
+        <div class="reac-container">
           <div class="title">
             <%= link_to sentence.title, sentence_path(sentence.id) %>
             (P.<%=sentence.page %>)
@@ -38,7 +38,7 @@
   <p class="liked-navi">いいねしたメモ</p>
 
       <% @reacted_sentences.each do |sentence|%>
-        <div class="container">
+        <div class="reac-container">
           <div class="title">
             <%= link_to sentence.title, sentence_path(sentence.id) %>
           </div>

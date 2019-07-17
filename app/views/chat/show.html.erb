@@ -6,13 +6,13 @@
       <div class="chatPartner_name"><%= @chat_room_user.name %></div>
     </div>
   </header>
-  <div class="container">
+  <div class="chat-container">
     <div class="messagesArea messages">
       <%= render @chat_messages %>
     </div>
   </div>
   <form class="messageInputForm">
-    <div class='container'>
+    <div class='chat-container'>
       <input type="text" data-behavior="room_speaker" class="messageInputForm_input" placeholder="メッセージを入力...">
     </div>
   </form>
