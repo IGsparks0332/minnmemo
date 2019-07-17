@@ -6,9 +6,9 @@
 <br>
 
 
-
-<div class="posted">
-  <p class="posted-navi">投稿したメモ</p>
+<div class=reaction-navi>
+  <div class="posted">
+    <p class="posted-navi">投稿したメモ</p>
 
       <% @sentences.each do |sentence| %>
         <div class="reac-container">
@@ -34,10 +34,10 @@
         </div>
       <% end %>
 
-</div>
+    </div>
 
-<div class="liked">
-  <p class="liked-navi">いいねしたメモ</p>
+    <div class="liked">
+      <p class="liked-navi">いいねしたメモ</p>
 
       <% @reacted_sentences.each do |sentence|%>
         <div class="reac-container">
@@ -58,4 +58,5 @@
           </div>
       <% end %>
 
-</div>
+      </div>
+    </div>

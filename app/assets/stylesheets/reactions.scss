@@ -3,6 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @media screen and (min-width: 480px) {
+  .reaction-navi{
+      display: flex;
+  }
+
+  .reac-container{
+
+      color:#323232;
+      font-size: 1.7vh;
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-top: 8px;
+  }
+
+  .sentencebox{
+      padding-bottom: 5px;
+      text-align: center;
+      font-size: 1vw;
+      font-weight: bold;
+  }
 
   .post{
       text-align: center;
@@ -22,32 +41,42 @@
     }
 
     .posted-navi{
-      padding-left: 25%;
       font-size: 1.7vw;
       color: #64C99B;
+      text-align: center;
     }
 
-    .posted{
-      float: left;
-      width: 50%;
+    .posted{;
+      width: 40%;
       padding-left: 5%;
+      padding-right: 5%;
+          a:visited { color:#64C99B; text-decoration:none }
+          a:link {color:#64C99B; text-decoration:none }
     }
 
     .liked-navi{
-      padding-left: 75%;
       font-size: 1.5vw;
       color: #64C99B;
-    }
-
-    .liked{
-      padding-right: 5%;
+      text-align: center;
     }
 
     .reac-container{
+      padding-top: 20px;
       color:#454545;
       margin: 3px;
       font-size: 1.7vh;
+      border-style: solid; border-color: #64C99B;
     }
+
+    .liked{
+      width: 40%;
+      padding-left: 5%;
+      padding-right: 5%;
+          a:visited { color:#64C99B; text-decoration:none }
+          a:link {color:#64C99B; text-decoration:none }
+    }
+
+
 
     .page{
       font-size: 1.5vh;
@@ -59,7 +88,7 @@
     }
 
     .title{
-      font-size: 1.2vw;
+      text-align: center;
     }
 
 }

@@ -3,12 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @media screen and (min-width: 480px) {
-  .userAction_edit{
-      display: inline-box;
-  }
 
   .userAction_logout{
-      display: inline-box;
+    margin-left: 10px;
   }
 
   .userActionlogo{
@@ -20,14 +17,20 @@
       margin: auto ;
       margin-top: 1.5% ;
       padding: 0.5%;
-      border: solid;
       color:#64C99B;
-      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
   }
 
   .usershowPage{
       padding-top: 2%;
       color:#323232;
+  }
+
+  .user-show-container{
+    text-align: center;
   }
 }
 @media screen and (max-width: 480px) {
