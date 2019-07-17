@@ -2,43 +2,88 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@media screen and (min-width: 480px) {
+
+  .sentence{
+    width: auto;
+    margin: 5% auto 0%;
+    max-width: 500px;
+    height: 50vh;
+    text-align: center;
+    font-size: 1vw;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    padding: 30px;
+    line-height: 1.7;
+    border: solid;
+    border-width: thin;
+  }
+
+  .twitter{
+    text-align: left;
+  }
 
 
-.sentence{
-  width: auto;
-  margin: 5% auto 0%;
-  max-width: 500px;
-  height: 50vh;
-  text-align: center;
-  font-size: 1vw;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-  padding: 30px;
-  line-height: 1.7;
-  border: solid;
-  border-width: thin;
-}
-
-.twitter{
-  text-align: left;
-}
-
-
-.actions {
+  .actions {
     display: flex;
     justify-content: space-between;
     width: 200px;
     margin: 15px auto;
-    &.is-none {
-      display: none;
+      &.is-none {
+        display: none;
+      }
     }
+
+    .color {
+      color:#64C99B;
+    }
+
+    .twitter{
+      width: 200px;
+      margin: 15px auto;
+    }
+
 }
 
-.color {
-    color:#64C99B;
-}
+@media screen and (max-width: 480px) {
 
-.twitter{
-  width: 200px;
-  margin: 15px auto;
+  .sentence{
+    width: auto;
+    margin: 5% auto 0%;
+    max-width: 500px;
+    height: 50vh;
+    text-align: center;
+    font-size: 4.5vw;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    padding: 30px;
+    line-height: 1.7;
+    border: solid;
+    border-width: thin;
+  }
+
+  .twitter{
+    text-align: left;
+  }
+
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 15px auto;
+      &.is-none {
+        display: none;
+      }
+    }
+
+    .color {
+      color:#64C99B;
+    }
+
+    .twitter{
+      width: 200px;
+      margin: 15px auto;
+    }
+
 }

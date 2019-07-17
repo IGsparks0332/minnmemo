@@ -15,10 +15,10 @@
           <div class="title">
             <%= link_to sentence.title, sentence_path(sentence.id) %>
             (P.<%=sentence.page %>)
+            <%= link_to "編集", edit_sentence_path(sentence.id) %>
           </div>
           <div class="sentencebox">
-            <%=sentence.body %>
-            <%= link_to "編集", edit_sentence_path(sentence.id) %>
+            <%=simple_format(sentence.body) %>
           </div>
           <div class="plus">
             プライベートメモ:<%=sentence.plus %>
