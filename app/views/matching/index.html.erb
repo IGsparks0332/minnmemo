@@ -12,7 +12,7 @@
             </div>
             <div class="matching-body">
               <div class="matchingPerson">
-                  <div class="matchingPerson_name">相手の名前:<%= user.name %>さん</div>
+                  <div class="matchingPerson_name"><%= user.name %>さん</div>
               </div>
               <p class="match-like">相手からのいいね。</p>
               <% match_sentences_to_currentuser = Reaction.where(sentence_id: @got_reaction_users_sentences , user_id: user.id).map(&:sentence_id) %>
