@@ -20,14 +20,16 @@
           <div class="sentencebox">
             <%=simple_format(sentence.body) %>
           </div>
-          <div class="author">
-            著者:<%=sentence.author %>
-          </div>
-          <div class="publisher">
-            出版:<%=sentence.publisher %>
-          </div>
-          <div class="plus">
-            プライベートメモ:<%=sentence.plus %>
+          <div class="reac-sentences-subnavi">
+            <div class="author">
+              著者:<%=sentence.author %>
+            </div>
+            <div class="publisher">
+              出版:<%=sentence.publisher %>
+            </div>
+            <div class="plus">
+              プライベートメモ:<%=sentence.plus %>
+            </div>
           </div>
         </div>
       <% end %>
@@ -41,21 +43,19 @@
         <div class="reac-container">
           <div class="title">
             <%= link_to sentence.title, sentence_path(sentence.id) %>
-          </div>
-          <div class="page">
             (P.<%= sentence.page %>)
           </div>
           <div class="sentencebox">
             メモした一節:<%=sentence.body %>
           </div>
-          <div class="author">
-            著者:<%=sentence.author %>
+          <div class="reac-sentences-subnavi">
+            <div class="author">
+              著者:<%=sentence.author %>
+            </div>
+            <div class="publisher">
+              出版社:<%=sentence.publisher %>
+            </div>
           </div>
-          <br>
-          <div class="publisher">
-            出版社:<%=sentence.publisher %>
-          </div>
-        </div>
       <% end %>
 
 </div>
