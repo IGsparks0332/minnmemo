@@ -3,9 +3,6 @@
     <div class="matcherlist">
         <% @match_users.each do |user| %>
             <div class="matchingheader">
-                <div class="matchingPerson">
-                    <div class="matchingPerson_name"><%= user.name %></div>
-                </div>
                 <div class="openchat">
                     <%= form_tag :chat_index, method: :post do %>
                         <input name="user_id" type="hidden" value="<%= user.id %>" />
@@ -13,20 +10,23 @@
                     <% end %>
                 </div>
             </div>
-                <h1>相手からのいいね。</h1>
-                <% match_sentences_to_currentuser = Reaction.where(sentence_id: @got_reaction_users_sentences , user_id: user.id).map(&:sentence_id) %>
-                <% match_sentences_to_currentuser = Sentence.where(id: match_sentences_to_currentuser) %>
-                <% match_sentences_to_currentuser.each do |sentence| %>
-                    <%= sentence.title %>
-                <% end %>
-                <h1>自分からのいいね</h1>
-                <% match_sentences_from_currentuser = Reaction.where(user_id: current_user.id , sentence_id: Sentence.where(user_id: user.id),like_id: 1).map(&:sentence_id) %>
-                <% match_sentences_from_currentuser = Sentence.where(id: match_sentences_from_currentuser) %>
-                <% match_sentences_from_currentuser.each do |sentence| %>
-                    <%= sentence.title %>
-                <% end %>
+            <div class="matching-body">
+              <div class="matchingPerson">
+                  <div class="matchingPerson_name">相手の名前:<%= user.name %>さん</div>
+              </div>
+              <p class="match-like">相手からのいいね。</p>
+              <% match_sentences_to_currentuser = Reaction.where(sentence_id: @got_reaction_users_sentences , user_id: user.id).map(&:sentence_id) %>
+              <% match_sentences_to_currentuser = Sentence.where(id: match_sentences_to_currentuser) %>
+              <% match_sentences_to_currentuser.each do |sentence| %>
+                <p class="match-title"><%= sentence.title %></p>
+              <% end %>
+              <p class="match-liked">自分からのいいね</p>
+              <% match_sentences_from_currentuser = Reaction.where(user_id: current_user.id , sentence_id: Sentence.where(user_id: user.id),like_id: 1).map(&:sentence_id) %>
+              <% match_sentences_from_currentuser = Sentence.where(id: match_sentences_from_currentuser) %>
+              <% match_sentences_from_currentuser.each do |sentence| %>
+                <p class="match-title"><%= sentence.title %></p>
+              <% end %>
         <% end %>
-
-
+            </div>
     </div>
 </div>

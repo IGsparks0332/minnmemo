@@ -4,16 +4,39 @@
 
 .matchercontainer{
     text-align: center;
-    margin-top: 10px;
     color: #64C99B;
     border: solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 8px;
 }
 
 .openchat{
-    padding-left: 3% ;
     text-align: center;
+    border-bottom: solid; border-color: #323232;
+    padding-bottom: 5px;
+    border-width: thin;
 }
 
+.match-title{
+    padding-left: 5%;
+}
+
+
 .matchingheader{
-    display: flex;
+    padding-bottom: 10%;
+}
+
+.matching-body{
+    color:#323232;
+}
+
+
+.matcherlist{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 8px;
+    padding:5px;
+    border: solid; border-color: #323232;
+    border-width: thin;
 }
