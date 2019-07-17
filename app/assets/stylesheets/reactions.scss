@@ -90,6 +90,13 @@
       }
 
       .posted{
+          a:visited { color:#64C99B; text-decoration:none }
+          a:link {color:#64C99B; text-decoration:none }
+      }
+
+      .liked{
+          a:visited { color:#64C99B; text-decoration:none }
+          a:link {color:#64C99B; text-decoration:none }
       }
 
       .liked-navi{
@@ -104,7 +111,7 @@
 
 
       .title{
-        font-size: 3vw;
+        font-size: 3.5vw;
         text-align: center;
         padding-bottom: 5px;
       }
@@ -133,7 +140,8 @@
 
       .publisher{
         padding-top: 5px;
-        padding-bottom: 5px; 
+        padding-bottom: 5px;
       }
+
 
 }
