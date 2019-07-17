@@ -3,17 +3,15 @@
     <div class="matcherlist">
           <div class="match">
         <% @match_users.each do |user| %>
-            <div class="matchingheader">
-                <div class="openchat">
-                    <%= form_tag :chat_index, method: :post do %>
-                        <input name="user_id" type="hidden" value="<%= user.id %>" />
-                    <%= submit_tag 'チャットを開く', class: "chatForm_btn" %>
-                    <% end %>
-                </div>
-            </div>
             <div class="matching-body">
               <div class="matchingPerson">
                   <div class="matchingPerson_name"><%= user.name %>さん</div>
+              </div>
+              <div class="openchat">
+                  <%= form_tag :chat_index, method: :post do %>
+                      <input name="user_id" type="hidden" value="<%= user.id %>" />
+                  <%= submit_tag 'チャットを開く', class: "chatForm_btn" %>
+                  <% end %>
               </div>
               <p class="match-like">相手からのいいね。</p>
               <% match_sentences_to_currentuser = Reaction.where(sentence_id: @got_reaction_users_sentences , user_id: user.id).map(&:sentence_id) %>
