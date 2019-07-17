@@ -14,7 +14,6 @@
 .openchat{
     text-align: center;
     border-bottom: solid; border-color: #323232;
-    border-top:  solid; border-color: #323232;
     padding-bottom: 5px;
     border-width: thin;
 }
@@ -38,11 +37,15 @@
     margin-right: 5px;
     margin-top: 8px;
     padding:5px;
-    border: solid; border-color: #323232;
-    border-width: thin;
 }
 
 .matchingPerson_name{
     text-align: center;
     font-weight: bold;
+}
+
+.match{
+    border:solid; border-color: #323232;
+    border-width: thin;
+    padding: 5px;
 }
