@@ -1,13 +1,27 @@
-<div class="campaign">
-  <h3>現在の献本キャンペーン</h3>
+<div class="titlelogo-container">
+  <p class="titlelogo">みんなの読書メモ</p>
 </div>
-<div class="rank">
-  <h3>いいね数ランキング</h3>
-  <% @rank.each.with_index(1) do |sentence,i| %>
-    第
-    <%=i%>
-    位
-    <%= sentence.title %>
-    <br>
-  <% end %>
+
+
+
+<div class="top-content">
+  <div class="campaign-container">
+    <p class="info-of-campaign">現在の献本キャンペーン</p>
+  </div>
+  <div class="rank-container">
+    <p class="rank">いいね数ランキング</p>
+    <% @rank.each.with_index(1) do |sentence,i| %>
+      第
+      <%=i%>
+      位
+      <%= sentence.title %>
+      <br>
+    <% end %>
+  </div>
+</div>
+<div class="how-to-use-container-container">
+  <div class="how-to-user-container"><p class="bottom-like">プロフィール</p><p class="how-to-use">マッチング相手に表示されるプロフィールを編集できます。</p></div>
+  <div class="how-to-user-container"><p class="bottom-like">スワイプ</p><p class="how-to-use">他ユーザーのメモをスワイプできます。</p></div>
+  <div class="how-to-user-container"><p class="bottom-like">メモ帳</p><p class="how-to-use">お気に入りの一節をメモ出来ます。また、いいねした他ユーザーのメモを確認できます。</p></div>
+  <div class="how-to-user-container"><p class="bottom-like">チャット</p><p class="how-to-use">マッチングした相手とチャットが出来ます。</p></div>
 </div>

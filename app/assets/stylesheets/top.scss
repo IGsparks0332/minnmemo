@@ -2,10 +2,62 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#carouselExampleIndicators{
-    padding-top: 10vh;
+
+
+.titlelogo-container{
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #64C99B;
+  font-size: 5.5vw;
 }
 
-.campaign{
+.titlelogo{
+  margin-top: 3%;
+  margin-bottom: 0px;
+}
+
+.top-content{
+  display: flex;
+  -webkit-justify-content: center; /* Safari */
+  justify-content:         center;
+}
+
+
+.rank-container{
   text-align: center;
+  padding-left: 2.5%;
+}
+
+.rank{
+  font-size: 2vw;
+}
+
+.campaign-container{
+  text-align: center;
+}
+
+.campaign-container{
+  font-size: 2vw;
+  padding-right: 2.5%;
+}
+
+.how-to-user-container{
+  display: flex;
+  margin:auto;
+}
+
+.how-to-use{
+  font-size: 1vw;
+  width: 50%;
+}
+
+.bottom-like{
+  background-color: #64C99B ;
+  color: #FFFFFF ;
+  font-weight: bold ;
+  font-size: 1.5vw;
+  margin-right: 3%;
+  width:15%;
+  text-align: center;
+  margin-left: 25%;
 }
