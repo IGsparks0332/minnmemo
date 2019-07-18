@@ -1,24 +1,35 @@
+<head>
+  <style type="text/css">
+    tablearea{
+      width:100%;
+      height:30%;
+    }
+  </style>
+</head>
+
 <%= form_for @sentence do |s| %>
     <div class="field">
         <%= s.label :編集画面 %>
         <br>
         タイトル
-        <%= s.text_field :title,size:140 %>
+        <%= s.text_field :title,size:50 %>
         <br>
         何ページ?
-        <%= s.number_field :page,size:140 %>
+        <%= s.number_field :page,size:50 %>
         <br>
         文章
-        <%= s.text_field :body,size:140 %>
+        <br>
+        <%= s.text_area :body,size:"100×100" %>
         <br>
         自由欄(他人に表示されません。)
-        <%= s.text_field :plus,size:140 %>
+        <br>
+        <%= s.text_area :plus,size:"100×100" %>
         <br>
         出版社
-        <%= s.text_field :publisher,size:140 %>
+        <%= s.text_field :publisher,size:50 %>
         <br>
         筆者
-        <%= s.text_field :author,size:140 %>
+        <%= s.text_field :author,size:50 %>
         <br>
     </div>
     <div class="action">

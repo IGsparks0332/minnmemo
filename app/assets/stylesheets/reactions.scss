@@ -2,68 +2,179 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.posted{
-    
+@media screen and (min-width: 480px) {
+  .reaction-navi{
+      display: flex;
+  }
+
+  .reac-container{
+
+      color:#323232;
+      font-size: 1.7vh;
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-top: 8px;
+  }
+
+  .sentencebox{
+      padding-bottom: 5px;
+      text-align: center;
+      font-size: 1vw;
+      font-weight: bold;
+  }
+
+  .post{
+      text-align: center;
+      margin-top: 1vh;
+      padding-top: 1vh;
+      padding-bottom: 1vh;
+      font-size: 1.5vw;
+      border-bottom: solid;
+      color: #64C99B;
+    }
+
+    .memo{
+      color: #64C99B;
+      border: solid;
+      padding: 10px;
+      font-size: 3vw;
+    }
+
+    .posted-navi{
+      font-size: 1.7vw;
+      color: #64C99B;
+      text-align: center;
+    }
+
+    .posted{;
+      width: 40%;
+      padding-left: 5%;
+      padding-right: 5%;
+          a:visited { color:#64C99B; text-decoration:none }
+          a:link {color:#64C99B; text-decoration:none }
+    }
+
+    .liked-navi{
+      font-size: 1.5vw;
+      color: #64C99B;
+      text-align: center;
+    }
+
+    .reac-container{
+      padding-top: 20px;
+      color:#454545;
+      margin: 3px;
+      font-size: 1.7vh;
+      border-style: solid; border-color: #64C99B;
+    }
+
+    .liked{
+      width: 40%;
+      padding-left: 5%;
+      padding-right: 5%;
+          a:visited { color:#64C99B; text-decoration:none }
+          a:link {color:#64C99B; text-decoration:none }
+    }
+
+
+
+    .page{
+      font-size: 1.5vh;
+    }
+
+
+    .author{
+      float: left;
+    }
+
+    .title{
+      text-align: center;
+    }
+
 }
 
-.post{
-    text-align: center;
-    margin-top: 1vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    font-size: 1.5vw;
-    border-bottom: solid;
-    color: #64C99B;
-}
 
-.memo{
-    color: #64C99B;
-    border: solid;
-    padding: 10px;
-}
+@media screen and (max-width: 480px) {
 
-.posted-navi{
-    padding-left: 25%;
-    font-size: 1.7vw;
-    color: #64C99B;
-}
+    .post{
+        text-align: center;
+        margin-top: 1vh;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        font-size: 1.5vw;
+        color: #64C99B;
+      }
 
-.posted{
-     float: left;
-     width: 50%;
-     padding-left: 5%;
-}
+      .memo{
+        color: #64C99B;
+        border: solid;
+        padding: 10px;
+        font-size: 4.5vw;
+      }
 
-.liked-navi{
-    padding-left: 75%;
-    font-size: 1.5vw;
-    color: #64C99B;
-}
+      .posted-navi{
+        font-size: 3.5vw;
+        color: #64C99B;
+        text-align: center;
+      }
 
-.liked{
-    padding-right: 5%;
-}
+      .posted{
+          a:visited { color:#64C99B; text-decoration:none }
+          a:link {color:#64C99B; text-decoration:none }
+      }
 
-.container{
-    color:#454545;
-    margin: 3px;
-    font-size: 1.7vh;
-}
+      .liked{
+          a:visited { color:#64C99B; text-decoration:none }
+          a:link {color:#64C99B; text-decoration:none }
+      }
 
-.page{
-    font-size: 1.5vh;
-}
+      .liked-navi{
+        font-size: 3.5vw;
+        color: #64C99B;
+        text-align: center;
+      }
+
+      .page{
+        font-size: 1.5vh;
+      }
 
 
-.author{
-    float: left;
-}
+      .title{
+        font-size: 3.5vw;
+        text-align: center;
+        padding-bottom: 5px;
+      }
+
+      .reac-container{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-style: solid; border-color: #64C99B;
+        color:#323232;
+        font-size: 1.7vh;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 8px;
+      }
+
+      .sentencebox{
+        padding-bottom: 5px;
+        text-align: center;
+        font-size: 3.3vw;
+        font-weight: bold;
+      }
+
+      .plus{
+        padding-bottom: 5px;
+      }
+
+      .publisher{
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      .reac-sentences-subnavi{
+        padding-left:5px;
+      }
 
 
-.sentencebox{
-}
-
-
-.title{
-    font-size: 1.2vw;
 }
