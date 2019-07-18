@@ -95,31 +95,31 @@
 
   .campaign-container{
     text-align: center;
-  }
-
-  .campaign-container{
     font-size: 2vw;
     padding-right: 2.5%;
   }
 
   .how-to-user-container{
-    display: flex;
     margin:auto;
   }
 
+  .how-to-use-container-container{
+    padding-top:10%;
+  }
+
   .how-to-use{
-    font-size: 1vw;
-    width: 70%;
+    font-size: 20px;
+    margin-right: 3%;
+    margin-left: 3%;
   }
 
   .bottom-like{
     background-color: #64C99B ;
     color: #FFFFFF ;
     font-weight: bold ;
-    font-size: 1.5vw;
+    font-size: 4vw;
     margin-right: 3%;
-    width:15%;
+    margin-left: 3%;
     text-align: center;
-    margin-left: 10%;
   }
 }
