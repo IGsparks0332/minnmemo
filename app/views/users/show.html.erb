@@ -1,12 +1,14 @@
 <% if current_user.id == @user.id %>
   <div class='userAction'>
       <div class="userAction_edit">
-        <%= link_to(content_tag(:i, "", class: 'fas fa-edit fa-x userActionlogo'), edit_user_registration_path) %>
-        <span>編集</span>
+        <%= link_to edit_user_registration_path, :method => :get do %>
+          <i class="fas fa-edit">編集</i>
+        <% end %>
       </div>
-      <div class='userAction_logout'>
-        <%= link_to(content_tag(:i, "", class: 'fas fa-sign-out-alt fa-x userActionlogo'), destroy_user_session_path, method: :delete) %>
-        <span>ログアウト</span>
+      <div class="userAction_logout">
+        <%= link_to destroy_user_session_path, :method => :delete do %>
+          <i class="fas fa-edit">ログアウト</i>
+        <% end %>
       </div>
   </div>
 <% end %>

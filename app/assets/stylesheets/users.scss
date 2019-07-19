@@ -44,6 +44,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      a:visited { color:#64C99B; text-decoration:none }
+      a:link {color:#64C99B; text-decoration:none }
   }
   .userAction_logout{
       margin-left: 10px;
