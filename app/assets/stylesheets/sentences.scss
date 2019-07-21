@@ -42,7 +42,10 @@
       width: 200px;
       margin: 15px auto;
     }
-
+    .memo-submit{
+      text-align: center;
+      padding-top: 10px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -84,6 +87,10 @@
     .twitter{
       width: 200px;
       margin: 15px auto;
+    }
+    .memo-submit{
+      text-align: center;
+      padding-top: 10px;
     }
 
 }
