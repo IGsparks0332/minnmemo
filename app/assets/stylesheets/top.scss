@@ -85,23 +85,6 @@
     justify-content:         center;
   }
 
-
-  .rank-container{
-    text-align: center;
-    padding-left: 2.5%;
-    font-size: 2vw;
-  }
-
-  .rank{
-    font-size: 2vw;
-  }
-
-  .campaign-container{
-    text-align: center;
-    font-size: 2vw;
-    padding-right: 2.5%;
-  }
-
   .how-to-user-container{
     margin:auto;
   }
@@ -157,5 +140,11 @@
   .browser-how-to{
     font-size: 3vw;
     text-align: center;
+  }
+  .campaign-info{
+    color: #64C99B ;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 5vw;
   }
 }
