@@ -1,36 +1,66 @@
 <div class="sinupPage">
-  <header class="header">
-    <div>アカウントを作成</div>
-  </header>
+  <div class="sing-up-header">
+    <div class="sing-up-header-content">アカウントを作成</div>
+    <%= render "devise/shared/links" %>
+  </div>
   <div class='user-new-container'>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class:"mt-5" }) do |f| %>
       <%= devise_error_messages! %>
-      <div class="form-group">
-        <label>名前</label>
-        <%= f.text_field :name, class: "form-control", placeholder: "名前を入力してください" %>
+      <div class="sing-up-form-label-container">
+        <label class="sing-up-form-label">名前</label>
       </div>
-      <div class="form-group">
-        <label>Eメールアドレス</label>
-        <%= f.email_field :email, class: "form-control", placeholder: "emailを入力してください" ,autocomplete: "email" %>
+      <div class="sing-up-form-group">
+        <%= f.text_field :name,:size=>"40", class: "form-control", placeholder: "名前を入力してください",autocomplete: "off" %>
       </div>
-      <div class="form-group">
-        <label>パスワード</label>
+      <div class="sing-up-form-label-container">
+        <label class="sing-up-form-label">Eメールアドレス</label>
+      </div>
+      <div class="sing-up-form-group">
+        <%= f.email_field :email,:size=>"40", class: "form-control", placeholder: "emailを入力してください" ,autocomplete: "email" %>
+      </div>
+      <div class="sing-up-form-label-container">
+        <label class="sing-up-form-label">パスワード</label>
+      </div>
+      <div class="sing-up-form-group">
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %>文字以上入力してください)</em>
         <% end %><br />
-        <%= f.password_field :password, class: "form-control", placeholder:"パスワードを入力してください", autocomplete: "off" %>
+        <%= f.password_field :password,:size=>"40", class: "form-control", placeholder:"パスワードを入力してください", autocomplete: "off" %>
       </div>
-      <div class="form-group">
-        <label>確認用パスワード</label>
-        <%= f.password_field :password_confirmation, class:"form-control", placeholder: "パスワードを再度入力してください", autocomplete: "off" %>
+      <div class="sing-up-form-label-container">
+        <label class="sing-up-form-label">確認用パスワード</label>
       </div>
-      <div class="form-group">
-        <label>自己紹介文</label>
-        <%= text_area :user, :self_introduction, maxlength: "1000", rows: "10", class:"form-control" %>
+      <div class="sing-up-form-group">
+        <%= f.password_field :password_confirmation,:size=>"40", class:"form-control", placeholder: "パスワードを再度入力してください", autocomplete: "off" %>
       </div>
+      <div class="sing-up-form-label-container">
+        <label class="sing-up-form-label">自己紹介文</label>
+      </div>
+      <div class="sing-up-form-group">
+        <%= text_area :user, :self_introduction,:size=>"40", maxlength: "100", rows: "5", class:"form-control" , placeholder: "マッチングしたお相手に表示されます。" %>
+      </div>
+      <div class="sing-up-form-label-container">
+        <label class="sing-up-form-label">年齢</label>
+      </div>
+      <div class="sing-up-form-group">
+        <%= f.text_area :age,:size=>"40", class: "form-control" , placeholder: "他の人には表示されません。"%>
+      </div>
+      <div class="sing-up-form-label-container">
+        <label class="sing-up-form-label">職業</label>
+      </div>
+      <div class="sing-up-form-group">
+        <%= f.text_area :job, :size=>"40",class: "form-control" , placeholder: "他の人には表示されません。"%>
+      </div>
+      <div class="sing-up-form-label-container">
+        <label class="sing-up-form-label">性別</label>
+      </div>
+      <div class="sing-up-form-group">
+        <%= f.text_area :sex,:size=>"40", class: "form-control", placeholder: "他の人には表示されません。" %>
+      </div>
+
+
       <div class="text-center">
         <%= f.submit "はじめる", class: "btn submitBtn" %>
-        <%= render "devise/shared/links" %>
       </div>
     <% end %>
   </div>

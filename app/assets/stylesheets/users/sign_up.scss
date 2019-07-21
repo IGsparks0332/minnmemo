@@ -1,0 +1,46 @@
+.sing-up-header{
+  text-align: center;
+  color: #64C99B;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  font-weight: bold;
+}
+
+.sing-up-form-label-container{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  background-color: #64C99B;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
+.sing-up-form-label{
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 4vw;
+  text-align: center;
+
+}
+
+.sing-up-form-group{
+  text-align: center;
+}
+
+.text_field{
+  text-align: center;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.submitBtn {
+    width: 200px;
+    padding: 10px;
+    border-radius: 90px;
+    transition: opacity .5s;
+    &:hover {
+      opacity: .6;
+    }
+  }
