@@ -1,11 +1,11 @@
 class SentencesController < ApplicationController
-    
+
     before_action :authenticate_user!
 
   def new
    @sentence = Sentence.new
   end
-  
+
   def create
    @sentence = Sentence.new(sentence_params)
    @sentence.user = current_user
@@ -16,7 +16,7 @@ class SentencesController < ApplicationController
    end
   end
 
-  
+
   def index
     @s=2
     @sentence = Sentence.find_by(id: @s)
@@ -24,8 +24,8 @@ class SentencesController < ApplicationController
         while @sentence.user_id == current_user.id || current_user.already_reacted?(@sentence) do
             @s = @s+1
             @sentence = Sentence.find_by(id: @s)
-        end        
-    rescue NoMethodError 
+        end
+    rescue NoMethodError
         @sentence= Sentence.find_by(id: 1)
     end
   end
@@ -33,37 +33,41 @@ class SentencesController < ApplicationController
     #@s=2
     #@sentence = Sentence.find_by(id: @s)
     #@check=Reaction.find_by(sentence_id: @sentence.id , user_id: current_user.id)
-    
+
     #begin
     #    until @check.blank? do
     #        @s = @s+1
     #        @sentence = Sentence.find_by(id: @s)
     #        @check=Reaction.find_by(sentence_id: @sentence.id, user_id: current_user.id)
     #    end
-        
+
     #    while @sentence.user_id == current_user.id do
     #        @s = @s+1
     #        @sentence = Sentence.find_by(id: @s)
     #    end
-    #rescue NoMethodError 
+    #rescue NoMethodError
     #    @sentence= Sentence.find_by(id: 1)
     #end
     #############
-  
+
   def destroy
     Sentence.find(params[:id]).destroy
     redirect_to :back
   end
-  
+
   def show
     @sentence = Sentence.find_by(id: params[:id])
+    RakutenWebService.configuration do |c|
+      c.application_id = ENV['Application_id']
+      c.affiliate_id = ENV['Affiliate_id']
+    end
     @items = RakutenWebService::Ichiba::Item.search(:keyword => @sentence.title ) # This returns Enamerable object
   end
-  
+
   def edit
     @sentence = Sentence.find_by(id: params[:id])
   end
-  
+
   def update
     @sentence = Sentence.find_by(id: params[:id])
     if @sentence.update(sentence_params)
@@ -72,7 +76,7 @@ class SentencesController < ApplicationController
       redirect_to action: "edit"
     end
   end
-    
+
     private
 #セキュリティのため、許可した:bodyというデータだけ取ってくるようにする
   def sentence_params
@@ -80,5 +84,5 @@ class SentencesController < ApplicationController
   end
 
 
-  
+
 end
