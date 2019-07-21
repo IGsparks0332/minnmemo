@@ -11,9 +11,11 @@
 .sing-in-form-label-container{
   background-color:#64C99B;
   text-align: center;
+  font-weight: bold;
   margin-bottom: 5px;
   margin-top:10px;
-  font-weight: bold;
+  margin-right: 3%;
+  margin-left: 3%;
 }
 
 .sing-in-form-label{
@@ -22,5 +24,6 @@
 
 .linkToRemakePass{
   text-align: center;
-  padding-top: 15px;
+  padding-top: 5px;
+  font-size: 10px;
 }
