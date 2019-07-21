@@ -6,3 +6,13 @@
   }
   font-size: 13px;
 }
+
+
+.linkToSignUp{
+  margin: 15px 0 15px;
+  text-align: center;
+  & > a {
+    color:#64C99B;
+  }
+  font-size: 13px;
+}
