@@ -61,6 +61,9 @@
     text-align: center;
     margin-left: 25%;
   }
+  .onegai{
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -130,5 +133,21 @@
     margin-right: 3%;
     margin-left: 3%;
     text-align: center;
+  }
+
+  .guide-to-add-container{
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+
+  .onegai{
+    text-align: center;
+    background-color: #64C99B ;
+    color: #9B3664;
+    font-weight: bold;
+  }
+  .how-to-navi{
+    text-align: center;
+    margin-top: 5px;
   }
 }
