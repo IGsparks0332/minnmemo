@@ -141,17 +141,21 @@
   }
 
   .onegai{
+    font-size: 5vw;
     text-align: center;
-    background-color: #64C99B ;
     color: #9B3664;
-    font-weight: bold;
-  }
-  .how-to-navi{
-    text-align: center;
-    margin-top: 5px;
+    margin-top: 5%;
   }
   .browser{
     margin-top: 10px;
     margin-bottom: 3px;
+    text-align: center;
+    background-color:  #9B3664;
+    color: #64C99B ;
+    font-weight: bold;
+  }
+  .browser-how-to{
+    font-size: 3vw;
+    text-align: center;
   }
 }
