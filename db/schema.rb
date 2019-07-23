@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190715171926) do
+ActiveRecord::Schema.define(version: 20190723141249) do
 
   create_table "chat_messages", force: :cascade do |t|
     t.integer  "chat_room_id", null: false
@@ -46,10 +46,11 @@ ActiveRecord::Schema.define(version: 20190715171926) do
     t.string   "author"
     t.string   "publisher"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.integer  "page"
     t.text     "plus"
+    t.boolean  "suspicious", default: false, null: false
   end
 
   create_table "users", force: :cascade do |t|

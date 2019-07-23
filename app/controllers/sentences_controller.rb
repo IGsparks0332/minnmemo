@@ -21,7 +21,7 @@ class SentencesController < ApplicationController
     @s=2
     @sentence = Sentence.find_by(id: @s)
     begin
-        while @sentence.user_id == current_user.id || current_user.already_reacted?(@sentence) do
+        while @sentence.user_id == current_user.id || current_user.already_reacted?(@sentence) || @sentence.suspicious == true do
             @s = @s+1
             @sentence = Sentence.find_by(id: @s)
         end
