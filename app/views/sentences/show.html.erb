@@ -4,10 +4,11 @@
 <br>
 <% @items.each do |item| %>
   <tr>
-  <td><img src="<%= item['smallImageUrls'][0] %>"></td>
-  <td><%= link_to item.name, "#{item.url}" %></td>
-  <td align="right"><%= number_with_delimiter(item.price) %>円</td>
-  <%= item.genre_id%>
-  <br>
+  <% if item.genre_id=101931%>
+    <td><img src="<%= item['smallImageUrls'][0] %>"></td>
+    <td><%= link_to item.name, "#{item.url}" %></td>
+    <td align="right"><%= number_with_delimiter(item.price) %>円</td>
+    <br>
+  <% end %>
   </tr>
 <% end %>
