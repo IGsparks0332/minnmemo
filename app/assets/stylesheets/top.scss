@@ -8,7 +8,7 @@
     text-align: center;
     color: #FFFFFF;
     background-color: #64C99B;
-    font-size: 5.5vw;
+    font-size: 2.5vw;
   }
 
   .titlelogo{
@@ -34,11 +34,10 @@
 
   .campaign-container{
     text-align: center;
-  }
-
-  .campaign-container{
     font-size: 2vw;
     padding-right: 2.5%;
+    margin-top: 5%;
+    color: #64C99B ;
   }
 
   .how-to-user-container{
@@ -46,9 +45,13 @@
     margin:auto;
   }
 
-  .how-to-use{
-    font-size: 1vw;
-    width: 50%;
+
+  .how-to-use-navi{
+    font-size: 2vw;
+    text-align: center;
+    color: #64C99B ;
+    margin-top:5%;
+    margin-bottom:0%;
   }
 
   .bottom-like{
@@ -63,7 +66,31 @@
   }
   .onegai{
     text-align: center;
+    margin-top: 5%;
+    color: #9B3664;
+    font-size: 2vw;
   }
+  .chrome{
+    display: flex;
+    margin-top:3%;
+
+  }
+  .Safari{
+    display: flex;
+    margin-top:3%;
+
+  }
+  .browser{
+    background-color:  #9B3664;
+    color: #64C99B ;
+    margin-left: 25%;
+    width: 15%;
+    margin-right: 3%;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: bold;
+  }
+
 }
 
 @media screen and (max-width: 480px) {
