@@ -5,7 +5,7 @@
         <% @match_users.each do |user| %>
             <div class="matching-body">
               <div class="matchingPerson">
-                  <div class="matchingPerson_name"><%= user.name %>さん</div>
+                  <div class="matchingPerson_name"><%= link_to user.name,user_path(user.id) %></div>
               </div>
               <div class="openchat">
                   <%= form_tag :chat_index, method: :post do %>
