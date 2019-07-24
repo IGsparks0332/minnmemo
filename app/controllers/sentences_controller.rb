@@ -57,7 +57,8 @@ class SentencesController < ApplicationController
 
   def show
     @sentence = Sentence.find_by(id: params[:id])
-    @items = RakutenWebService::Ichiba::Item.search(:keyword => @sentence.title ) # This returns Enamerable object
+    items = RakutenWebService::Ichiba::Item.search(:keyword => @sentence.title ) # This returns Enamerable object
+    @items = items.where(genre_id: 101931)
   end
 
   def edit
