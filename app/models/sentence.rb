@@ -9,4 +9,8 @@ class Sentence < ApplicationRecord
   validates :author, presence: true
   validates :publisher, presence: true
 
+  def to_param
+    "#{id}-#{title}".parameterize
+  end
+
 end

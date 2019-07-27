@@ -58,5 +58,5 @@ gem 'owlcarousel-rails'
 group :production do
   gem 'pg'
 end
-
+gem 'friendly_id'
 gem 'dotenv-rails'

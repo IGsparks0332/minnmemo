@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20190726133817) do
     t.integer  "page"
     t.text     "plus"
     t.boolean  "suspicious", default: false, null: false
-    t.integer  "type",       default: 1,     null: false
+    t.integer  "WebOrBook",  default: 1,     null: false
   end
 
   create_table "users", force: :cascade do |t|
