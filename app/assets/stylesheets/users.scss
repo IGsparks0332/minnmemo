@@ -32,6 +32,10 @@
   .user-show-container{
     text-align: center;
   }
+  .edit{
+    a:visited { color:#64C99B; text-decoration:none }
+    a:link {color:#64C99B; text-decoration:none }
+  }
 }
 @media screen and (max-width: 480px) {
   .userAction{

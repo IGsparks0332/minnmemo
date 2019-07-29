@@ -2,12 +2,12 @@
   <div class='userAction'>
       <div class="userAction_edit">
         <%= link_to edit_user_registration_path, :method => :get do %>
-          <i class="fas fa-edit">編集</i>
+          <i class="fas fa-edit edit">編集</i>
         <% end %>
       </div>
-      <div class="userAction_logout">
+      <div class="userAction_logout edit">
         <%= link_to destroy_user_session_path, :method => :delete do %>
-          <i class="fas fa-edit">ログアウト</i>
+          <i class="fas fa-edit edit">ログアウト</i>
         <% end %>
       </div>
   </div>
