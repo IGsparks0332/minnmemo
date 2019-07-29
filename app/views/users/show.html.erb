@@ -20,9 +20,13 @@
       <div class='username'><p class="userInfop">名前:<%= @user.name %></p></div>
       <div class='userid'><p class="userInfop"><%= @user.id %>人目のユーザーです。</p></div>
       <div class='userInfo_selfIntroduction'><p class="userInfop">自己紹介:<%= @user.self_introduction %></p></div>
+      <div class='bookmeter_id'>読書メーターURL:<%= @user.bookmeter_id %></div>
       <br>
       <% if @user.self_introduction.blank? %>
         <div class="userInfo_selfIntroduction"><p class="userInfop">自己紹介文は設定されていません。</p></div>
+      <% end %>
+      <% if @user.bookmeter_id.blank? %>
+        <div class="bookmeter_id"><p class="userInfop">読書メーターURLは設定されていません。</p></div>
       <% end %>
     </div>
   </div>

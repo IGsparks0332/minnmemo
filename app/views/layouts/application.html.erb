@@ -26,7 +26,7 @@
       </li>
       <li class="booksIcon">
         <% if user_signed_in? %>
-        <%= link_to "メモ帳", reaction_path(current_user.id), class: "button", :method => :get  %>
+        <%= link_to "メモ帳", user_reactions_path(current_user.id), class: "button", :method => :get  %>
         <% end %>
       </li>
       <li class="messageIcon">

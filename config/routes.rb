@@ -8,8 +8,10 @@ Rails.application.routes.draw do
     resources :reactions, only: %i(destroy create)
   end
 
-  resources :reactions, only:%i(show)
-  resources :users, only: %i(show) 
+
+  resources :users, only: %i(show) do
+    resources :reactions, only:%i(index)
+  end
   resources :chat, only: %i(create show)
   resources :matching, only: %i(index)
 

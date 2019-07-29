@@ -37,7 +37,13 @@
         <label class="sing-up-form-label">自己紹介文</label>
       </div>
       <div class="sing-up-form-group">
-        <%= text_area :user, :self_introduction,:size=>"40", maxlength: "100", rows: "5", class:"form-control" , placeholder: "マッチングしたお相手に表示されます。" %>
+        <%= text_area :user, :self_introduction,:size=>"40", maxlength: "100", rows: "5", class:"form-control" , placeholder: "マッチングした相手に表示されます" %>
+      </div>
+      <div class="sing-up-form-label-container">
+        <label class="sing-up-form-label">読書メーターURL</label>
+      </div>
+      <div class="sing-up-form-group">
+        <%= text_area :user, :bookmeter_id,:size=>"40", maxlength: "100", rows: "5", class:"form-control" , placeholder: "マッチングした相手に表示されます" %>
       </div>
       <div class="sing-up-form-label-container">
         <label class="sing-up-form-label">年齢</label>
