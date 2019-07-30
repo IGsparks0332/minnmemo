@@ -1,6 +1,8 @@
 <div class="swipearea">
     <div class="sentence">
     <%=simple_format(@sentence.body) %>
+    <div class="quote-title"><%= @sentence.title %></div>
+    <div class="quote-others">(<%= @sentence.author %> <%= @sentence.publisher%>)より</div>
     </div>
     <% unless @sentence.id==1 %>
         <div class="actions" id="actionBtnArea">

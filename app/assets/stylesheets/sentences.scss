@@ -46,6 +46,17 @@
       text-align: center;
       padding-top: 10px;
     }
+
+  .quote{
+    font-size: 0.8vw;
+    }
+  .quote-title{
+    font-size: 0.5vw;
+    }
+  .quote-others{
+    font-size: 0.5vw;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -91,6 +102,13 @@
     .memo-submit{
       text-align: center;
       padding-top: 10px;
+    }
+
+    .quote-title{
+      font-size: 0.5vw;
+    }
+    .quote-others{
+      font-size: 0.5vw;
     }
 
 }
