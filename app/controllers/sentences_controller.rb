@@ -29,26 +29,6 @@ class SentencesController < ApplicationController
         @sentence= Sentence.find_by(id: 1)
     end
   end
-    ######遺産#####
-    #@s=2
-    #@sentence = Sentence.find_by(id: @s)
-    #@check=Reaction.find_by(sentence_id: @sentence.id , user_id: current_user.id)
-
-    #begin
-    #    until @check.blank? do
-    #        @s = @s+1
-    #        @sentence = Sentence.find_by(id: @s)
-    #        @check=Reaction.find_by(sentence_id: @sentence.id, user_id: current_user.id)
-    #    end
-
-    #    while @sentence.user_id == current_user.id do
-    #        @s = @s+1
-    #        @sentence = Sentence.find_by(id: @s)
-    #    end
-    #rescue NoMethodError
-    #    @sentence= Sentence.find_by(id: 1)
-    #end
-    #############
 
   def destroy
     Sentence.find(params[:id]).destroy
