@@ -3,7 +3,7 @@
     <%=simple_format(@sentence.body) %>
     <div class="quote">
       <div class="quote-title"><%= @sentence.title %></div>
-      <div class="quote-others">著:<%= @sentence.author %> 編集:<%= @sentence.publisher%>より</div>
+      <div class="quote-others"> 著:<%= @sentence.author %><br>編集:<%= @sentence.publisher%>より</div>
     </div>
     </div>
     <% unless @sentence.id==1 %>
